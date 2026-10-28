@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Smile That Hid a Storm | UNLIMITED POWER</title>
+  <meta name="description" content="A thoughtful story about invisible struggles, mental health, and finding hope.">
+
+
+  <nav class="nav-links" id="primaryNav" aria-label="Main navigation">
+        <a href="#home" data-page="home">games</a>
+        <a href="read.html">max</a>
+        <a href="#daily" data-page="daily">Advice</a>
+        <a href="#program" data-page="program">storys</a>
+        <a href="#channels" data-page="channels">charles</a>
+        <a href="#contact" data-page="contact">books</a>
+      </nav>
+
+      
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+    :root {
+      --ink: #202b32;
+      --muted: #69777c;
+      --green: #1e6556;
+      --mint: #e8f3ed;
+      --cream: #fbf8f1;
+      --line: #e5e8e3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .magazine {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    .mag-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .mag-brand {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .back-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .9rem;
+    }
+
+    .back-link:hover {
+      color: var(--green);
+    }
+
+    .article-header {
+      max-width: 850px;
+      margin: 65px auto 35px;
+      text-align: center;
+    }
+
+    .category {
+      display: inline-block;
+      color: var(--green);
+      font: 700 .76rem/1.4 Arial, sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .article-header h1 {
+      margin: 22px 0;
+      font-size: clamp(2.7rem, 7vw, 5.6rem);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      font-weight: 700;
+    }
+
+    .article-header h1 em {
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    .article-meta {
+      margin-top: 26px;
+      color: var(--muted);
+      font: .82rem Arial, sans-serif;
+    }
+
+    .hero-image {
+      position: relative;
+      margin: 40px 0 55px;
+    }
+
+    .hero-image img {
+      display: block;
+      width: 100%;
+      max-height: 590px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+    }
+
+    .image-caption {
+      padding: 10px 4px;
+      color: var(--muted);
+      font: .78rem/1.5 Arial, sans-serif;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 680px) minmax(180px, 240px);
+      justify-content: center;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .story {
+      min-width: 0;
+      font-size: 1.1rem;
+    }
+
+    .story h2 {
+      margin: 55px 0 15px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    .story h3 {
+      margin: 26px 0 7px;
+      font-size: 1.22rem;
+      line-height: 1.4;
+    }
+
+    .story p {
+      margin: 0 0 23px;
+    }
+
+    .story .lead {
+      font-size: 1.35rem;
+      line-height: 1.8;
+    }
+
+    .dropcap::first-letter {
+      float: left;
+      color: var(--green);
+      font-size: 4.5rem;
+      line-height: .85;
+      padding: 9px 10px 0 0;
+    }
+
+    .pull-quote {
+      margin: 40px 0;
+      padding: 25px 30px;
+      border-left: 4px solid var(--green);
+      background: var(--mint);
+      color: #254a40;
+      font-size: 1.5rem;
+      line-height: 1.55;
+    }
+
+    .pull-quote cite {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font: .75rem Arial, sans-serif;
+    }
+
+    .lesson {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+      margin: 26px 0;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lesson-number {
+      color: var(--green);
+      font: 700 1.5rem Arial, sans-serif;
+    }
+
+    .lesson h3 {
+      margin: 0 0 8px;
+    }
+
+    .lesson p {
+      margin: 0;
+      color: #4f5d60;
+    }
+
+    .reflection {
+      margin: 45px 0;
+      padding: 32px;
+      border-radius: 8px;
+      background: #233e38;
+      color: white;
+    }
+
+    .reflection .category {
+      color: #b7e4cf;
+    }
+
+    .reflection h2 {
+      margin-top: 15px;
+    }
+
+    .reflection blockquote {
+      margin: 18px 0;
+      font-size: 1.55rem;
+      line-height: 1.55;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 25px;
+      padding-top: 8px;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar-card {
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      margin-bottom: 22px;
+    }
+
+    .sidebar-card h3 {
+      margin: 0 0 12px;
+      font-family: Georgia, serif;
+      font-size: 1.25rem;
+    }
+
+    .sidebar-card p,
+    .sidebar-card li {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+
+    .sidebar-card ul {
+      padding-left: 18px;
+    }
+
+    .closing {
+      margin: 60px 0;
+      padding: 45px 20px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .closing h2 {
+      max-width: 650px;
+      margin: 15px auto;
+      color: var(--green);
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.2;
+    }
+
+    .closing p {
+      max-width: 570px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    .article-footer {
+      padding: 25px 0 45px;
+      color: var(--muted);
+      font: .82rem/1.8 Arial, sans-serif;
+    }
+
+    .home-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .home-button:hover {
+      background: #164c40;
+    }
+
+    @media (max-width: 800px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .sidebar {
+        position: static;
+        order: 2;
+      }
+
+      .article-header {
+        margin-top: 42px;
+      }
+
+      .article-header h1 {
+        letter-spacing: -1px;
+      }
+
+      .story {
+        font-size: 1.04rem;
+      }
+
+      .hero-image {
+        margin-bottom: 30px;
+      }
+
+      .reflection {
+        padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .article-header,
+      .hero-image,
+      .article-layout {
+        animation: appear .65s ease both;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="magazine">
+
+    <nav class="mag-nav">
+      <a class="mag-brand" href="index.html">UNLIMITED POWER</a>
+      <a class="back-link" href="index.html">← Back to homepage</a>
+    </nav>
+
+    <header class="article-header">
+      <span class="category">Mind &amp; Life · Real Stories</span>
+
+      <h1>The Smile That <em>Hid a Storm</em></h1>
+
+      <p class="subtitle">
+        We often notice the smiles people share with the world.
+        But what about the struggles they never talk about?
+      </p>
+
+      <div class="article-meta">
+        A STORY OF RESILIENCE &nbsp;·&nbsp; 5 MIN READ
+      </div>
+    </header>
+
+    <figure class="hero-image">
+      <img
+        src="images/kevin.png"
+        alt="AI-generated illustration of a man sharing a message about mental health"
+      >
+     
+    </figure>
+
+    <div class="article-layout">
+
+      <article class="story">
+
+        <p class="lead dropcap">
+          Some of the hardest battles leave no visible scars. A person
+          can laugh with friends, attend class, help others, and still
+          be carrying pain that nobody around them understands.
+        </p>
+
+        <p>
+          We live in a world where saying “I'm fine” can feel easier
+          than explaining what's really happening inside. Sometimes
+          we hide our feelings because we fear being judged. Sometimes
+          we simply don't know how to put our pain into words.
+        </p>
+
+        <div class="pull-quote">
+          “You never really know what someone is carrying. Kindness
+          can open a door that judgment keeps closed.”
+        </div>
+
+        <h2>When life becomes too heavy</h2>
+
+        <p>
+          Kevin Hines knows what it means to struggle. As a teenager
+          and young adult, he experienced serious mental health
+          difficulties. At 19, he attempted suicide by jumping from
+          San Francisco's Golden Gate Bridge. He survived.
+        </p>
+
+        <p>
+          His survival did not mean that every difficulty disappeared.
+          Recovery took time, continued effort, and support. Eventually,
+          Kevin began sharing his experience publicly, becoming a
+          mental health advocate who encourages people to speak up,
+          listen to one another, and take emotional suffering seriously.
+        </p>
+
+        <p>
+          His story reminds us that a person's darkest moment does
+          not have to define their entire life. It also reminds us
+          that people who are struggling deserve compassion before
+          anyone knows the full story.
+        </p>
+
+        <h2>What his story can teach us</h2>
+
+        <div class="lesson">
+          <div class="lesson-number">01</div>
+          <div>
+            <h3>A smile doesn't tell the whole story</h3>
+            <p>
+              Don't assume that someone is doing well just because
+              they look cheerful. Ask how they are, listen patiently,
+              and make room for an honest answer.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-number">02</div>
+          <div>
+            <h3>You don't have to carry everything alone</h3>
+            <p>
+              Reaching out to a trusted friend, family member,
+              counselor, or mental health professional can be a
+              meaningful first step. You deserve support before
+              things become unbearable.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-number">03</div>
+          <div>
+            <h3>Recovery is not a race</h3>
+            <p>
+              Healing can take time. A difficult day doesn't erase
+              your progress, and asking for help again is not failure.
+            </p>
+          </div>
+        </div>
+
+        <div class="reflection">
+          <span class="category">Pause &amp; Reflect</span>
+          <h2>Let's make this personal.</h2>
+
+          <blockquote>
+            Have you ever said “I'm okay” when you really needed
+            someone to listen?
+          </blockquote>
+
+          <p>
+            You don't need perfect words to begin a conversation.
+            You might simply say, “I've been having a difficult time
+            lately. Could we talk?”
+          </p>
+        </div>
+
+        <h2>What if we checked in more often?</h2>
+
+        <p>
+          Imagine a world where asking “How are you, really?” was
+          normal. Where friends could talk without being laughed at.
+          Where people were encouraged to seek support instead of
+          hiding their struggles.
+        </p>
+
+        <p>
+          You can help create that world in small ways. Listen without
+          rushing to give advice. Check on a friend who has become
+          unusually quiet. Be honest when you need support yourself.
+          Small moments of connection can matter.
+        </p>
+
+        <div class="closing">
+          <span class="category">Take This With You</span>
+          <h2>Your hardest chapter is not your whole story.</h2>
+          <p>
+            You don't have to figure everything out today. Take one
+            small step, reach out when you need to, and remember that
+            you deserve care even when life feels difficult.
+          </p>
+          <a href="index.html" class="home-button">Keep exploring UNLIMITED POWER →</a>
+        </div>
+
+        <footer class="article-footer">
+          
+        </footer>
+
+      </article>
+
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Inside this story</h3>
+          <ul>
+            <li>Invisible emotional struggles</li>
+            <li>Kevin Hines's journey</li>
+            <li>Three lessons for everyday life</li>
+            <li>A moment to reflect</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>A gentle reminder</h3>
+          <p>
+            You don't need to wait until you're at your breaking
+            point to talk to someone. Your feelings matter now.
+          </p>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Try this today</h3>
+          <p>
+            Send a thoughtful message to someone you care about.
+            Ask how they're doing, and make time to listen.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+
+
+<section id="home">
+        <div class="story-img">
+          <h1>Your mind matters. <em>You matter.</em></h1>
+          <p class="hero-description">
+            
+          </p>
+
+         <div class="sosyphus">
+    <img src="images/sosyphus.jpg"
+        alt="A person pushing a boulder up a hill, symbolizing the struggle of mental health challenges."
+          >
+        </div>
+      </div>
+     </section>
+
+</body>
+</html>
